@@ -1,0 +1,25 @@
+<!-- views/edit-book.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование книги</title>
+</head>
+<body>
+<h1>Редактирование книги</h1>
+<form action="/update-book/<%= book._id %>" method="post">
+    <label for="title">Название:</label>
+    <input type="text" id="name" name="name" value="<%= book.name %>" required>
+    <br>
+    <label for="author">Автор:</label>
+    <input type="text" id="author" name="author" value="<%= book.author %>" required>
+    <br>
+    <label for="genre">Жанр:</label>
+    <input type="text" id="price" name="price" value="<%= book.price %>" required>
+    <br>
+    <button type="submit">Сохранить изменения</button>
+</form>
+</body>
+</html>
