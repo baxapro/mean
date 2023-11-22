@@ -70,7 +70,8 @@ const Book = mongoose.model('Book', bookSchema);
 app.get('/',async (req, res) => {
   try {
     const books = await Book.find({});
-    res.render('index', {  books });
+
+    res.render('index', {  books});
   } catch (error) {
     res.status(500).json({ error: 'Не удалось получить список книг' });
   }
